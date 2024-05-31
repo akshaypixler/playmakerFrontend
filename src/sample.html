@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function isArmstrong(value) {
+      const strValue = String(value);
+      const valueLength = strValue.length;
+      let appendValue = 0;
+      let flag = false;
+
+      for(var char of strValue) {
+        console.log(char);
+        appendValue += Number(char) ** valueLength;
+      }
+
+      console.log(appendValue);
+
+      if(value === appendValue) flag = true;
+
+      return flag;
+    }
+
+    console.log(isArmstrong(153));
+    console.log(isArmstrong(0));
+    console.log(isArmstrong(370));
+    console.log(isArmstrong(371));
+    console.log(isArmstrong(407));
+
+    // 153 
+  </script>
+</body>
+</html>
